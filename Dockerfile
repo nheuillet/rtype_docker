@@ -16,9 +16,17 @@ RUN mkdir -p /github/home/
 RUN conan remote remove conan-center ;\
     conan remote add conan-center https://api.bintray.com/conan/conan/conan-center ;\
     conan remote add epitech https://api.bintray.com/conan/epitech/public-conan ;\
-    conan remote add bincrafters https://api.bintray.com/conan/bincrafters/public-conan; \
-    conan profile update settings.compiler.libcxx=libstdc++11 default
+    conan remote add bincrafters https://api.bintray.com/conan/bincrafters/public-conan;
 
+RUN conan profile new default; \
+    conan profile update settings.os=Linux default; \
+    conan profile update settings.os_build=Linux default; \
+    conan profile update settings.arch=x86_64 default; \
+    conan profile update settings.arch_build=x86_64 default; \
+    conan profile update settings.compiler=gcc default; \
+    conan profile update settings.compiler.version=10 default; \
+    conan profile update settings.compiler.libcxx=libstdc++11 default; \
+    conan profile update settings.build_type=release default
 
 RUN conan install . --build missing
 
