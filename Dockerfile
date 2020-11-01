@@ -26,7 +26,7 @@ RUN conan profile new default; \
     conan profile update settings.compiler=gcc default; \
     conan profile update settings.compiler.version=10 default; \
     conan profile update settings.compiler.libcxx=libstdc++11 default; \
-    conan profile update settings.build_type=release default
+    conan profile update settings.build_type=Release default
 
 RUN conan install . --build missing
 
