@@ -4,9 +4,9 @@ LABEL licenses="MIT"
 LABEL title="Epitech RTYPE Docker"
 LABEL description="Docker image with conan dependencies already compiled for CI/CD purposes"
 
-ENV CONAN_USER_HOME=/github/home/
-ENV HOME=/github/home/
-ENV CONAN_STORAGE_PATH=/github/home/.conan/data/
+ENV CONAN_USER_HOME=/conan/
+ENV HOME=/conan/
+ENV CONAN_STORAGE_PATH=/conan/.conan/data/
 
 WORKDIR /tmp/conan
 
