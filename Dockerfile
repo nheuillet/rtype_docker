@@ -6,6 +6,7 @@ LABEL description="Docker image with conan dependencies already compiled for CI/
 
 ENV CONAN_USER_HOME=/github/home/
 ENV HOME=/github/home/
+ENV CONAN_STORAGE_PATH=/github/home/.conan/data/
 
 WORKDIR /tmp/conan
 
