@@ -3,6 +3,16 @@ boost/1.74.0
 msgpack/3.3.0
 sfml/2.5.1@bincrafters/stable
 gtest/1.8.1@bincrafters/stable
+zlib/1.2.11@conan/stable
+bzip2/1.0.6@conan/stable
 
 [generators]
 cmake
+
+[options]
+sfml:window=True
+sfml:graphics=True
+sfml:audio=True
+
+[imports]
+bin, *.dll -> ./bin
