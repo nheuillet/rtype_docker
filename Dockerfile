@@ -12,7 +12,7 @@ WORKDIR /tmp/conan
 
 COPY conanfile.txt .
 
-RUN mkdir -p /github/home/
+RUN dnf install -y libXrandr-devel
 
 RUN conan remote remove conan-center ;\
     conan remote add conan-center https://api.bintray.com/conan/conan/conan-center ;\
